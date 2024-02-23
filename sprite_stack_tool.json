@@ -1,0 +1,7 @@
+{
+    "sprite_sheet" : "False",
+    "directory" : "assets/tile_car2/",
+    "display_size" : [50,50],
+    "screen_size" : [500,500],
+    "fps" : 60
+}
