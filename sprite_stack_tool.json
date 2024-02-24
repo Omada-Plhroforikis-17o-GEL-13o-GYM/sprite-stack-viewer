@@ -1,7 +1,9 @@
 {
-    "sprite_sheet" : "False",
-    "directory" : "assets/tile_car2/",
-    "display_size" : [50,50],
-    "screen_size" : [500,500],
-    "fps" : 60
+    "sprite_sheet" : true,
+    "sprite_sheet_tile_size" : [32,32],
+    "directory" : "assets/test_7.png",
+    "display_size" : [200,200],
+    "screen_size" : [1000,1000],
+    "fps" : 60,
+    "bg_color" : [255,255,255]
 }
