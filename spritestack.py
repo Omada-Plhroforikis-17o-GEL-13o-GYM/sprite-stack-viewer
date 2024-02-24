@@ -34,17 +34,28 @@ try:
         screen_size = tuple(json_settings["screen_size"])
         fps = json_settings["fps"]
         color = json_settings["bg_color"]
+        stack_space = json_settings["stacking_space"]
 except:
-    with open("sprite_stack_tool.json","r") as settings_json:
+    with open("sprite_stack_tool.json","w") as settings_json:
         default_data = {
             "sprite_sheet" : False,
             "sprite_sheet_tile_size" : [32,32],
-            "directory" : os.path.join("assets","formula"),
+            "directory" : "assets/formula/",
             "display_size" : [50,50],
             "screen_size" : [500,500],
             "fps" : 60,
-            "bg_color" : [0,0,0]
+            "bg_color" : [0,0,0],
+            "stacking_space" : 1
         }
+        json.dump(default_data,settings_json)
+        sprite_sheet: bool = default_data["sprite_sheet"]
+        stile_size: tuple = default_data["sprite_sheet_tile_size"]
+        dir = default_data["directory"] 
+        display_size = tuple(default_data["display_size"])
+        screen_size = tuple(default_data["screen_size"])
+        fps = default_data["fps"]
+        color = default_data["bg_color"]
+        stack_space = default_data["stacking_space"]
 
 
 
@@ -81,7 +92,7 @@ else:
     list_dir = os.listdir(dir)
     list_dir.sort()
     images = [pygame.image.load(dir + img) for img in list_dir]
-    print(images, os.listdir(dir), list_dir)
+    debug_print(images, os.listdir(dir), list_dir)
     temp_images = []
     for i in images:
         temp_images += [i.convert_alpha()]
@@ -114,7 +125,7 @@ while True:
     display.fill(color)
     
     #display.blit(pygame.transform.rotate(images[0], 30), (display_size[0]/2,display_size[1]/2),)
-    render_stack(display, images, (display_size[0]/2,display_size[1]/2), frame)
+    render_stack(display, images, (display_size[0]/2,display_size[1]/2), frame, stack_space)
     
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
