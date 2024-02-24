@@ -36,18 +36,18 @@ try:
         color = json_settings["bg_color"]
         stack_space = json_settings["stacking_space"]
 except:
-    with open("sprite_stack_tool.json","w") as settings_json:
+    with open("sprite_stack_tool.json","w",encoding='utf-8') as settings_json:
         default_data = {
             "sprite_sheet" : False,
             "sprite_sheet_tile_size" : [32,32],
-            "directory" : "assets/formula/",
+            "directory" : "assets/formula2/",
             "display_size" : [50,50],
             "screen_size" : [500,500],
             "fps" : 60,
             "bg_color" : [0,0,0],
             "stacking_space" : 1
         }
-        json.dump(default_data,settings_json)
+        json.dump(default_data,settings_json,ensure_ascii=False, indent=4)
         sprite_sheet: bool = default_data["sprite_sheet"]
         stile_size: tuple = default_data["sprite_sheet_tile_size"]
         dir = default_data["directory"] 

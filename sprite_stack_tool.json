@@ -1,10 +1,23 @@
 {
-    "sprite_sheet": false, 
-    "sprite_sheet_tile_size": [32, 32], 
-    "directory": "assets/formula/", 
-    "display_size": [50, 50], 
-    "screen_size": [500, 500], 
-    "fps": 60, 
-    "bg_color": [0, 0, 0],
-    "stacking_space" : 1
+    "sprite_sheet": false,
+    "sprite_sheet_tile_size": [
+        32,
+        32
+    ],
+    "directory": "assets/formula2/",
+    "display_size": [
+        50,
+        50
+    ],
+    "screen_size": [
+        500,
+        500
+    ],
+    "fps": 60,
+    "bg_color": [
+        0,
+        0,
+        0
+    ],
+    "stacking_space": 1
 }
