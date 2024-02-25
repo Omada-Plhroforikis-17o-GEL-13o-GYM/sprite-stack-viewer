@@ -5,6 +5,10 @@
         32
     ],
     "directory": "assets/formula2/",
+    "coordinates_1": [
+        -1,
+        -1
+    ],
     "display_size": [
         50,
         50
@@ -19,5 +23,11 @@
         0,
         0
     ],
-    "stacking_space": 1
+    "stacking_space": 1,
+    "multiple_sprites": false,
+    "directory2": "assets/formula/",
+    "coordinates_2": [
+        20,
+        20
+    ]
 }
