@@ -132,7 +132,7 @@ images2 = []
 if multiple_sprites:
     images2 = loading_sprite_stack(dir2)
 
-images1 = loading_sprite_stack(dir2)
+images1 = loading_sprite_stack(dir1)
 
 
 clock = pygame.time.Clock()
